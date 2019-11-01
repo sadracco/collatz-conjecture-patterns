@@ -1,17 +1,16 @@
+# Simple interface for coloring
+# I was to lazy to implement hsv2rgb myself but I plan to change it sometime
 from colorsys import hsv_to_rgb
 
-def rainbowColor(hue):
-    if not (0 <= hue <= 1):
-        raise ValueError('Hue must be a float value betwen 0 and 1')
-
-    r,g,b = hsv_to_rgb(hue, 1.0, 1.0)
-    R,G,B = int(255*r),int(255*g),int(255*b) 
-    return (R,G,B)
 
 def hsv2rgb(h,s,v):
     r,g,b = hsv_to_rgb(h, s, v)
-    R,G,B = int(255*r),int(255*g),int(255*b) 
-    return (R,G,B)
+    return (int(255*r),int(255*g),int(255*b))
+
+
+def rainbow(hue):
+    return hsv2rgb(hue, 1.0, 1.0)
+
 
 def main():
     from PIL import Image, ImageDraw
@@ -26,6 +25,7 @@ def main():
         pencil.line((i,0,i,200), fill = (R,G,B), width=2)
         
     img.show()
+
 
 if __name__=='__main__':
     main()
