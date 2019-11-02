@@ -14,7 +14,7 @@ n/2   if n is even
 - 5,16,8,4,2,1
 - 12,6,3,10,5,16,8,4,2,1
 
-#### Actualy good explanation:
+#### Actually good explanation:
 [Wikipedia](https://en.wikipedia.org/wiki/Collatz_conjecture)  
 [Numberphile](https://www.youtube.com/watch?v=5mFpVDpKX70)  
 [Coding Train](https://www.youtube.com/watch?v=EYLWxwo1Ed8)
